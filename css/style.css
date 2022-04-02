@@ -33,7 +33,7 @@ header nav {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 3%;
+  padding: 2%;
 }
 
 header nav #cabecalho {
@@ -160,7 +160,7 @@ main img {
     width: 100%;
   }
   header nav {
-    padding-top: 40px;
+    padding: 35px;
     border-bottom: solid 1px var(--text-color-menu-mobile);
   }
   header nav #botao-desktop {
@@ -178,12 +178,12 @@ main img {
   header nav button#botao-responsivo {
     display: relative;
     top: 30px;
-    left: 180px;
+    left: 150px;
   }
   header nav div#cabecalho {
     position: absolute;
     width: 100%;
-    top: 70px;
+    top: 80px;
     left: 0;
     text-align: left;
     -webkit-backdrop-filter: blur(5px);
