@@ -33,7 +33,7 @@ header nav {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 2%;
+  padding: 1.4%;
 }
 
 header nav #cabecalho {
@@ -144,13 +144,15 @@ main img {
   }
   .blur-mobile {
     background-image: url("../assets/blur-mobile.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
   }
 }
 
 @media screen and (max-width: 764px) {
   body {
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
   }
   #logo {
     display: none;
@@ -168,7 +170,7 @@ main img {
   }
   header nav #tamanho-logo, header nav button#botao-responsivo {
     position: absolute;
-    top: 40px;
+    top: 25px;
     left: 20px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -177,7 +179,7 @@ main img {
   }
   header nav button#botao-responsivo {
     display: relative;
-    top: 30px;
+    top: 15px;
     left: 150px;
   }
   header nav div#cabecalho {
@@ -227,7 +229,7 @@ main img {
   }
   #btn-responsivo button {
     display: block;
-    margin: 5% auto;
+    margin: 10% auto;
     padding: 0;
   }
   #btn-responsivo h2 {
@@ -235,7 +237,10 @@ main img {
     color: var(--text-color);
     text-align: center;
     padding: 4%;
-    margin-top: 4%;
+    margin-top: 10%;
+  }
+  main img {
+    max-width: 100vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

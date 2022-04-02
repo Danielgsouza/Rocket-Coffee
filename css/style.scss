@@ -30,7 +30,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        padding: 2%;
+        padding: 1.4%;
 
         #cabecalho {
             width: 60%;
@@ -151,13 +151,16 @@ main {
 
     .blur-mobile {
         background-image: url('../assets/blur-mobile.png');
+        background-repeat: no-repeat;
+        background-position: bottom;
     }
 }
 
 @media screen and (max-width: 764px) {
     body{
         width: 100%; 
-        overflow-x: hidden;       
+        overflow: hidden;
+             
     }
 
     #logo {
@@ -180,14 +183,14 @@ main {
             
             #tamanho-logo, button#botao-responsivo {
                 position: absolute;
-                top: 40px;
+                top: 25px;
                 left: 20px;
                 justify-content: center;
                 justify-items: auto;
             }
             button#botao-responsivo {
                 display: relative;
-                top: 30px;
+                top: 15px;
                 left: 150px;
             }
 
@@ -230,7 +233,7 @@ main {
                 .active {
                     background: url(../assets/menu-buguer-close.svg) no-repeat center/auto border-box;
                     
-                  } 
+                } 
             }
         }  
     }
@@ -244,7 +247,7 @@ main {
 
         button {
             display: block; 
-            margin: 5% auto;
+            margin: 10% auto;
             padding: 0;
 
         }
@@ -254,7 +257,13 @@ main {
             color:  var(--text-color);
             text-align: center;
             padding: 4%;
-            margin-top: 4%;
+            margin-top: 10%;
         }  
     }  
+
+    main {
+        img {
+        max-width: 100vh;
+        }
+    }
 }
