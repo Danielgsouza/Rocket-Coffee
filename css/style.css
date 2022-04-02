@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --background: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+}
+
+body {
+  background: var(--background);
+  background-image: url("../assets/blur-2.png");
+  background-repeat: no-repeat;
+  background-position: right;
+  height: 30px;
+}
+
+header nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 3%;
+}
+
+header nav #cabecalho {
+  width: 60%;
+  text-align: center;
+  cursor: pointer;
+}
+
+header nav #cabecalho a {
+  font: 400 16px 'Manrope', sans-serif;
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 5px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+}
+
+header nav #cabecalho a:hover {
+  padding-left: 7px;
+  border-left: solid 2px var(--button);
+}
+
+.botao {
+  display: block;
+  height: 50px;
+  padding: 3%;
+  width: 200px;
+  border-radius: 5px;
+  border: solid 2px var(--button);
+  color: var(--text-color);
+  background: transparent;
+  cursor: pointer;
+}
+
+#botao-desktop:hover, #botao-mobile:hover {
+  background-color: var(--button);
+}
+
+#logo {
+  width: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#logo-mobile {
+  display: none;
+}
+
+#botao-responsivo {
+  display: none;
+}
+
+#btn-responsivo {
+  display: none;
+}
+
+#botao-responsivo-fechar {
+  display: none;
+}
+
+main {
+  background-image: url("../assets/blur-1.png");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+main h1 {
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+  color: var(--backgrond);
+  font: 700 46px 'Manrope', sans-serif;
+  text-align: center;
+  margin: 13px 0;
+}
+
+main #titulo {
+  color: var(--text-color);
+  text-shadow: none;
+  border: none;
+  margin: 13px 0;
+}
+
+main img {
+  display: block;
+  margin: auto;
+  width: 59%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.remove-icon {
+  background: none;
+}
+
+@media screen and (max-width: 370px) {
+  main h1 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #blur-left {
+    background-image: none;
+  }
+  #blur-right {
+    background-image: none;
+  }
+  .blur-mobile {
+    background-image: url("../assets/blur-mobile.png");
+  }
+}
+
+@media screen and (max-width: 764px) {
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+  #logo {
+    display: none;
+  }
+  #logo-mobile {
+    display: block;
+    width: 100%;
+  }
+  header nav {
+    padding-top: 40px;
+    border-bottom: solid 1px var(--text-color-menu-mobile);
+  }
+  header nav #botao-desktop {
+    display: none;
+  }
+  header nav #tamanho-logo, header nav button#botao-responsivo {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    justify-items: auto;
+  }
+  header nav button#botao-responsivo {
+    display: relative;
+    top: 30px;
+    left: 180px;
+  }
+  header nav div#cabecalho {
+    position: absolute;
+    width: 100%;
+    top: 70px;
+    left: 0;
+    text-align: left;
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    background-color: var(--background);
+    height: 0;
+    padding-left: 0;
+    overflow: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+  header nav div#cabecalho a {
+    width: 100%;
+    border-radius: 0 !important;
+    background-color: transparent !important;
+    padding: 15px;
+    border-bottom: solid 1px var(--border-menu-mobile);
+  }
+  header nav div#cabecalho a:hover {
+    border-left: solid 2px var(--button);
+  }
+  header nav #botao-responsivo {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    border: none;
+  }
+  header nav #botao-responsivo button {
+    background: url(../assets/menu-buguer-open.svg) no-repeat center/auto border-box;
+  }
+  header nav #botao-responsivo .active {
+    background: url(../assets/menu-buguer-close.svg) no-repeat center/auto border-box;
+  }
+  #btn-responsivo {
+    display: block;
+    margin: auto;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    padding: 5%;
+  }
+  #btn-responsivo button {
+    display: block;
+    margin: 5% auto;
+    padding: 0;
+  }
+  #btn-responsivo h2 {
+    font: 700 22px 'Manrope', sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    padding: 4%;
+    margin-top: 4%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

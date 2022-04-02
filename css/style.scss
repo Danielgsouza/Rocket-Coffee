@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root {
+    --background: #000;
+    --text-color: #FFF;
+    --button: #8257E5;
+    --border: #29292E;
+    --border-menu-mobile: #A8A8B3;
+    --text-color-menu-mobile: #E1E1E6;
+}
+
+body {
+
+    background: var(--background);
+    background-image: url('../assets/blur-2.png');
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 30px;
+
+}
+
+header {
+    nav{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding:  3%;
+
+        #cabecalho {
+            width: 60%;
+            text-align: center;
+            cursor: pointer;
+
+             a {
+                font: 400 16px 'Manrope', sans-serif;
+                color: var(--text-color);
+                text-decoration: none;
+                padding: 10px;
+                display: inline-block; 
+                border-radius: 5px;
+                transition: 0.6s;
+
+                &:hover {
+                    padding-left: 7px;
+                    border-left: solid 2px var(--button);
+                    
+                }  
+            }
+   
+        }
+    }
+
+}
+
+.botao {
+    display: block;
+    height: 50px;
+    padding: 3%;
+    width: 200px;
+    border-radius: 5px;
+    border: solid 2px var(--button);
+    color: var(--text-color);
+    background: transparent;
+    cursor: pointer; 
+    
+}
+
+#botao-desktop, #botao-mobile {
+    &:hover{
+        background-color: var(--button);
+    }
+}
+
+#logo {
+    width: 40px;
+    object-fit: cover;
+}
+
+#logo-mobile {
+    display: none;
+}
+
+#botao-responsivo {
+    display: none;
+}
+
+#btn-responsivo {
+    display: none;
+}
+#botao-responsivo-fechar {
+    display: none;
+}
+
+main {
+    background-image: url('../assets/blur-1.png');
+    background-repeat: no-repeat;
+    background-position: left;
+
+   
+    h1 {
+        text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+        color:  var(--backgrond);
+        font: 700 46px 'Manrope', sans-serif;
+        text-align: center;
+        margin: 13px 0;
+    }
+
+    #titulo {
+        color:  var(--text-color);
+        text-shadow: none;
+        border: none;
+        margin: 13px 0; 
+    }
+
+    img {
+        display: block;
+        margin: auto;
+        width: 59%;
+        object-fit: cover;       
+    }
+}
+
+
+ 
+.remove-icon {
+    background: none;
+}  
+
+@media  screen and (max-width: 370px) {
+    
+    main {
+        h1 {
+            font-size: 36px;
+        }
+    }
+}
+
+@media  screen and (max-width: 425px) {
+    #blur-left {
+        background-image: none;
+    }
+    #blur-right {
+        background-image: none;
+    }
+
+    .blur-mobile {
+        background-image: url('../assets/blur-mobile.png');
+    }
+}
+
+@media screen and (max-width: 764px) {
+    body{
+        width: 100%; 
+        overflow-x: hidden;       
+    }
+
+    #logo {
+        display: none;
+    }
+    
+    #logo-mobile {
+        display: block;
+        width: 100%;
+    }
+
+    header {
+        nav{
+            padding-top: 40px;
+            border-bottom: solid 1px var(--text-color-menu-mobile);
+
+            #botao-desktop {
+                display: none;
+            }
+            
+            #tamanho-logo, button#botao-responsivo {
+                position: absolute;
+                top: 40px;
+                left: 20px;
+                justify-content: center;
+                justify-items: auto;
+            }
+            button#botao-responsivo {
+                display: relative;
+                top: 30px;
+                left: 180px;
+            }
+
+            div#cabecalho {
+                position: absolute;
+                width: 100%;
+                top: 70px;
+                left: 0;
+                text-align: left;
+                backdrop-filter: blur(5px);
+                background-color: var(--background);
+                height: 0;
+                padding-left: 0;
+                overflow: hidden;
+                transition: 0.5s;
+
+                a {
+                    width: 100%;
+                    border-radius: 0 !important;
+                    background-color: transparent !important;
+                    padding: 15px;
+                    border-bottom: solid 1px var(--border-menu-mobile);
+                   
+                    &:hover{
+                        border-left: solid 2px var(--button);
+                    }
+                }   
+            }
+
+            #botao-responsivo {
+                button {
+                    background: url(../assets/menu-buguer-open.svg) no-repeat center/auto border-box;
+                    
+                }
+                width: 100%;
+                display: block;
+                cursor: pointer;              
+                border: none;
+                
+                .active {
+                    background: url(../assets/menu-buguer-close.svg) no-repeat center/auto border-box;
+                    
+                  } 
+            }
+        }  
+    }
+
+    #btn-responsivo {
+        display: block;
+        margin: auto;
+        width: 100%;
+        object-fit: cover;
+        padding: 5%;
+
+        button {
+            display: block; 
+            margin: 5% auto;
+            padding: 0;
+
+        }
+
+        h2 {
+            font: 700 22px 'Manrope', sans-serif;
+            color:  var(--text-color);
+            text-align: center;
+            padding: 4%;
+            margin-top: 4%;
+        }  
+    }  
+}
